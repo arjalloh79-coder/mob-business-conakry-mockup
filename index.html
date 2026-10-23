@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mob Business | Accessoires Électroniques | Conakry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .lang-en { display: none; }
+    body.en .lang-fr { display: none; }
+    body.en .lang-en { display: block; }
+    .modal { display: none; }
+    .modal.active { display: flex; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-900 text-center text-sm py-2 px-4">
+    <span class="lang-fr">Maquette gratuite par Al-Falah Marketing — rien n'est en ligne sous votre nom. Pour revue uniquement.</span>
+    <span class="lang-en">Complimentary mockup by Al-Falah Marketing — nothing is live under your name. For review only.</span>
+  </div>
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="font-bold text-xl text-slate-900">Mob Business</div>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#services" class="hover:text-teal-600"><span class="lang-fr">Produits</span><span class="lang-en">Products</span></a>
+        <a href="#gallery" class="hover:text-teal-600"><span class="lang-fr">Galerie</span><span class="lang-en">Gallery</span></a>
+        <a href="#contact" class="hover:text-teal-600">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button onclick="toggleLang()" class="text-sm font-medium px-3 py-1 rounded-full border border-slate-300">EN / FR</button>
+        <a href="https://wa.me/224611378570" class="bg-teal-600 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-teal-700">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+  <section class="relative h-[70vh] min-h-[480px] flex items-center">
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80" alt="Electronics" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-slate-900/60"></div>
+    <div class="relative max-w-4xl mx-auto px-4 text-white text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+        <span class="lang-fr">Vos accessoires électroniques de confiance à Conakry</span>
+        <span class="lang-en">Your trusted electronics accessories in Conakry</span>
+      </h1>
+      <p class="text-lg md:text-xl mb-8 opacity-90">
+        <span class="lang-fr">Tablettes éducatives, accessoires et plus. Livraison rapide. Contactez-nous sur WhatsApp.</span>
+        <span class="lang-en">Educational tablets, accessories and more. Fast delivery. Contact us on WhatsApp.</span>
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/224611378570?text=Bonjour%20Mob%20Business%2C%20je%20souhaite%20commander" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-full text-lg">WhatsApp</a>
+        <a href="tel:+224611378570" class="bg-white text-slate-900 font-semibold px-8 py-4 rounded-full text-lg">Appeler</a>
+      </div>
+    </div>
+  </section>
+  <div class="bg-slate-900 text-white text-sm py-3 text-center">
+    <span class="lang-fr">Support Al-Falah : Laurel MD | Coyah | Freetown</span>
+    <span class="lang-en">Al-Falah support: Laurel MD | Coyah | Freetown</span>
+  </div>
+  <section id="services" class="py-16 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12"><span class="lang-fr">Nos produits phares</span><span class="lang-en">Featured products</span></h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80" alt="Tablette" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2"><span class="lang-fr">Tablettes éducatives</span><span class="lang-en">Educational tablets</span></h3>
+          <p class="text-slate-600 mb-4"><span class="lang-fr">Idéales pour les enfants. Support stable inclus.</span><span class="lang-en">Ideal for children. Stable support included.</span></p>
+          <button onclick="openModal('tablette')" class="text-teal-600 font-semibold">En savoir plus</button>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Accessoires" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2"><span class="lang-fr">Accessoires électroniques</span><span class="lang-en">Electronics accessories</span></h3>
+          <p class="text-slate-600 mb-4"><span class="lang-fr">Câbles, chargeurs, coques et plus.</span><span class="lang-en">Cables, chargers, cases and more.</span></p>
+          <button onclick="openModal('accessoires')" class="text-teal-600 font-semibold">En savoir plus</button>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80" alt="Gadgets" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2"><span class="lang-fr">Gadgets & plus</span><span class="lang-en">Gadgets & more</span></h3>
+          <p class="text-slate-600 mb-4"><span class="lang-fr">Tout pour rester connecté.</span><span class="lang-en">Everything to stay connected.</span></p>
+          <button onclick="openModal('gadgets')" class="text-teal-600 font-semibold">En savoir plus</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gallery" class="py-16 bg-white px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12"><span class="lang-fr">Galerie</span><span class="lang-en">Gallery</span></h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" class="rounded-xl h-48 w-full object-cover" alt="">
+        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=600&q=80" class="rounded-xl h-48 w-full object-cover" alt="">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" class="rounded-xl h-48 w-full object-cover" alt="">
+        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=600&q=80" class="rounded-xl h-48 w-full object-cover" alt="">
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="py-16 px-4 max-w-2xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Contact</h2>
+    <p class="mb-8 text-slate-600"><span class="lang-fr">Lambanyi, Conakry. Toujours ouvert.</span><span class="lang-en">Lambanyi, Conakry. Always open.</span></p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+      <a href="https://wa.me/224611378570" class="bg-green-500 text-white px-6 py-3 rounded-full font-semibold">WhatsApp +224 611 378 570</a>
+      <a href="mailto:Ourybah999.fr@gmail.com" class="bg-slate-800 text-white px-6 py-3 rounded-full font-semibold">Email</a>
+    </div>
+  </section>
+  <footer class="bg-slate-900 text-slate-300 py-12 px-4 text-sm">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="mb-4">Mob Business · Lambanyi, Conakry, Guinée</p>
+      <p class="mb-4">Maquette créée par <strong>Al-Falah Marketing</strong> · <a href="https://al-falahmarketing.com" class="text-teal-400">al-falahmarketing.com</a></p>
+      <p>Laurel, MD 20724 · +1 240 280 6137 · info@al-falahmarketing.com</p>
+      <p class="mt-4 text-xs opacity-70">Cette page est une maquette de démonstration uniquement. Aucun contenu n'a été publié au nom de Mob Business.</p>
+    </div>
+  </footer>
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t md:hidden flex z-40">
+    <a href="tel:+224611378570" class="flex-1 py-4 text-center font-semibold text-slate-800">Appeler</a>
+    <a href="https://wa.me/224611378570" class="flex-1 py-4 text-center font-semibold bg-teal-600 text-white">WhatsApp</a>
+  </div>
+  <div id="modal" class="modal fixed inset-0 bg-black/50 items-center justify-center p-4 z-50" onclick="closeModal()">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6" onclick="event.stopPropagation()">
+      <h3 id="modal-title" class="text-xl font-bold mb-4"></h3>
+      <p id="modal-body" class="text-slate-600 mb-6"></p>
+      <button onclick="closeModal()" class="bg-teal-600 text-white px-4 py-2 rounded-full">Fermer</button>
+    </div>
+  </div>
+  <script>
+    function toggleLang() { document.body.classList.toggle('en'); }
+    function openModal(type) {
+      const titles = { tablette: 'Tablettes éducatives', accessoires: 'Accessoires', gadgets: 'Gadgets' };
+      const bodies = { tablette: 'Tablettes conçues pour accompagner les enfants. Contactez-nous pour les prix.', accessoires: 'Large gamme d\'accessoires. Demandez sur WhatsApp.', gadgets: 'Découvrez nos nouveautés.' };
+      document.getElementById('modal-title').textContent = titles[type] || '';
+      document.getElementById('modal-body').textContent = bodies[type] || '';
+      document.getElementById('modal').classList.add('active');
+    }
+    function closeModal() { document.getElementById('modal').classList.remove('active'); }
+  </script>
+</body>
+</html>
